@@ -2,7 +2,7 @@ Here's a README file for your SwiftUI floating view implementation:
 
 ---
 
-# FloatingViewModifier SwiftUI Extension
+# Floating View for SwiftUI
 
 This SwiftUI extension provides a floating view that can be dynamically expanded or collapsed based on user interaction. It is designed to overlay content on top of the main view and animate its expansion or contraction with drag gestures. This modifier also supports controlling user interaction when the floating view is small or large.
 
