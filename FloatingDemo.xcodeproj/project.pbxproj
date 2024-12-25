@@ -6,9 +6,49 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2F4756E62D1C479700F6E617 /* FloatingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4756DE2D1C479700F6E617 /* FloatingView.framework */; };
+		2F4756E72D1C479700F6E617 /* FloatingView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4756DE2D1C479700F6E617 /* FloatingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F4756E42D1C479700F6E617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F4756C02D1C476800F6E617 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F4756DD2D1C479700F6E617;
+			remoteInfo = FloatingView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F4756EC2D1C479700F6E617 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F4756E72D1C479700F6E617 /* FloatingView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2F4756C82D1C476800F6E617 /* FloatingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F4756DE2D1C479700F6E617 /* FloatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FloatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2F4756E82D1C479700F6E617 /* Exceptions for "FloatingView" folder in "FloatingView" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				FloatingView.h,
+			);
+			target = 2F4756DD2D1C479700F6E617 /* FloatingView */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2F4756CA2D1C476800F6E617 /* FloatingDemo */ = {
@@ -16,10 +56,26 @@
 			path = FloatingDemo;
 			sourceTree = "<group>";
 		};
+		2F4756DF2D1C479700F6E617 /* FloatingView */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2F4756E82D1C479700F6E617 /* Exceptions for "FloatingView" folder in "FloatingView" target */,
+			);
+			path = FloatingView;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2F4756C52D1C476800F6E617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F4756E62D1C479700F6E617 /* FloatingView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F4756DB2D1C479700F6E617 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4756CA2D1C476800F6E617 /* FloatingDemo */,
+				2F4756DF2D1C479700F6E617 /* FloatingView */,
 				2F4756C92D1C476800F6E617 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,11 +98,22 @@
 			isa = PBXGroup;
 			children = (
 				2F4756C82D1C476800F6E617 /* FloatingDemo.app */,
+				2F4756DE2D1C479700F6E617 /* FloatingView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2F4756D92D1C479700F6E617 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2F4756C72D1C476800F6E617 /* FloatingDemo */ = {
@@ -55,10 +123,12 @@
 				2F4756C42D1C476800F6E617 /* Sources */,
 				2F4756C52D1C476800F6E617 /* Frameworks */,
 				2F4756C62D1C476800F6E617 /* Resources */,
+				2F4756EC2D1C479700F6E617 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2F4756E52D1C479700F6E617 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				2F4756CA2D1C476800F6E617 /* FloatingDemo */,
@@ -69,6 +139,29 @@
 			productName = FloatingDemo;
 			productReference = 2F4756C82D1C476800F6E617 /* FloatingDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2F4756DD2D1C479700F6E617 /* FloatingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F4756E92D1C479700F6E617 /* Build configuration list for PBXNativeTarget "FloatingView" */;
+			buildPhases = (
+				2F4756D92D1C479700F6E617 /* Headers */,
+				2F4756DA2D1C479700F6E617 /* Sources */,
+				2F4756DB2D1C479700F6E617 /* Frameworks */,
+				2F4756DC2D1C479700F6E617 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2F4756DF2D1C479700F6E617 /* FloatingView */,
+			);
+			name = FloatingView;
+			packageProductDependencies = (
+			);
+			productName = FloatingView;
+			productReference = 2F4756DE2D1C479700F6E617 /* FloatingView.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +174,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					2F4756C72D1C476800F6E617 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					2F4756DD2D1C479700F6E617 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -100,12 +196,20 @@
 			projectRoot = "";
 			targets = (
 				2F4756C72D1C476800F6E617 /* FloatingDemo */,
+				2F4756DD2D1C479700F6E617 /* FloatingView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2F4756C62D1C476800F6E617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F4756DC2D1C479700F6E617 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +226,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2F4756DA2D1C479700F6E617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F4756E52D1C479700F6E617 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F4756DD2D1C479700F6E617 /* FloatingView */;
+			targetProxy = 2F4756E42D1C479700F6E617 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2F4756D42D1C476D00F6E617 /* Debug */ = {
@@ -302,6 +421,76 @@
 			};
 			name = Release;
 		};
+		2F4756EA2D1C479700F6E617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YDN344UV2Z;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = net.sharetrip.ios.FloatingView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2F4756EB2D1C479700F6E617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YDN344UV2Z;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = net.sharetrip.ios.FloatingView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +508,15 @@
 			buildConfigurations = (
 				2F4756D72D1C476D00F6E617 /* Debug */,
 				2F4756D82D1C476D00F6E617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F4756E92D1C479700F6E617 /* Build configuration list for PBXNativeTarget "FloatingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F4756EA2D1C479700F6E617 /* Debug */,
+				2F4756EB2D1C479700F6E617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

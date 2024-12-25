@@ -6,16 +6,28 @@
 //
 
 import SwiftUI
+import FloatingView
 
 struct ContentView: View {
+    @State var allowUserInteraction = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            VStack {
+                Text("Click me")
+                    .onTapGesture {
+                        print("Hello")
+                    }
+                
+            }
+            .allowsHitTesting(allowUserInteraction)
+            .floatingView(allowUserInteraction: $allowUserInteraction) {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.blue)
+            }
+            
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 
