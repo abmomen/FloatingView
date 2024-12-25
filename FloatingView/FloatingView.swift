@@ -59,7 +59,7 @@ struct FloatingViewModifier<FloatingContent: View>: ViewModifier {
     }
     
     private func switchHeight() {
-        withAnimation(.easeInOut(duration: 0.10)) {
+        withAnimation(.snappy(duration: 0.05)) {
             height = position == .small ? 150 : 300
             opacity = position == .small ? 0 : 0.20
             allowUserInteraction = position == .small
