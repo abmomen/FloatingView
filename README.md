@@ -30,24 +30,28 @@ To use the floating view modifier in your SwiftUI view, you can call the `floati
 
 ```swift
 import SwiftUI
+import FloatingView
 
 struct ContentView: View {
-    @State private var allowUserInteraction = true
-
+    @State var allowUserInteraction = true
+    
     var body: some View {
-        VStack {
-            Text("Hello, World!")
-                .padding()
-        }
-        .floatingView(allowUserInteraction: $allowUserInteraction) {
+        ZStack {
             VStack {
-                Text("Floating Content")
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                Text("Click me")
+                    .onTapGesture {
+                        print("Hello")
+                    }
+                
             }
-            .frame(maxWidth: .infinity)
+            .allowsHitTesting(allowUserInteraction)
+            .floatingView(allowUserInteraction: $allowUserInteraction) {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.blue)
+            }
+            
         }
+        .ignoresSafeArea()
     }
 }
 ```
